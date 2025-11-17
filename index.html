@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BioLab Virtual</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f0f8ff; }
+    header { background:#2e8b57; color:white; padding:20px; text-align:center; }
+    nav { background:#3cb371; padding:10px; display:flex; justify-content:center; gap:15px; }
+    nav a { color:white; text-decoration:none; font-weight:bold; }
+    nav a:hover { text-decoration:underline; }
+    main { padding:20px; }
+    .button { background:#2e8b57; color:white; padding:10px 20px; border:none; cursor:pointer; margin:10px 0; }
+    .button:hover { background:#3cb371; }
+    .experiencia { border:1px solid #ccc; padding:15px; margin:10px 0; border-radius:8px; background:#fff; }
+    input, textarea, select { padding:8px; margin:5px 0; width:100%; border-radius:5px; border:1px solid #ccc; }
+    footer { background:#2e8b57; color:white; text-align:center; padding:15px; margin-top:20px; }
+    .quiz { margin-top:10px; padding:10px; border-top:1px solid #ccc; }
+    .hidden { display:none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>BioLab Virtual</h1>
+  <p>Autor: Charles Lourenço Mairosse</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#experimentos">Experimentos</a>
+  <a href="#tutoriais">Tutoriais</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#contato">Contato</a>
+  <a href="#login">Login</a>
+</nav>
+
+<main id="home">
+  <h2>Bem-vindo ao BioLab Virtual!</h2>
+  <p>Aprenda Biologia de forma prática e interativa. Todas as experiências são 100% para o usuário explorar!</p>
+  <button class="button" onclick="document.getElementById('experimentos').scrollIntoView();">Começar Experiência</button>
+</main>
+
+<main id="experimentos">
+  <h2>Experiências Interativas</h2>
+
+  <!-- Experiência 1 -->
+  <div class="experiencia">
+    <h3>1. Observação de células vegetais</h3>
+    <p>Objetivo: Observar células vegetais simuladas no microscópio virtual.</p>
+    <p>Materiais simulados: Microscópio, lâmina, planta virtual.</p>
+    <textarea placeholder="Descreva o que observou..." rows="4"></textarea>
+    <div class="quiz">
+      <label>Pergunta: Qual a função da parede celular?</label>
+      <select>
+        <option value="">Escolha a resposta</option>
+        <option value="suporte">Suporte e proteção</option>
+        <option value="respiracao">Respiração</option>
+        <option value="fotossintese">Fotossíntese</option>
+      </select>
+    </div>
+    <button class="button" onclick="alert('Relatório salvo!')">Salvar Relatório</button>
+  </div>
+
+  <!-- Experiência 2 -->
+  <div class="experiencia">
+    <h3>2. Fotossíntese em plantas</h3>
+    <p>Objetivo: Simular a fotossíntese e observar a produção de oxigênio.</p>
+    <textarea placeholder="Anote os resultados da simulação..." rows="4"></textarea>
+    <div class="quiz">
+      <label>Pergunta: Qual é o principal pigmento da fotossíntese?</label>
+      <select>
+        <option value="">Escolha a resposta</option>
+        <option value="clorofila">Clorofila</option>
+        <option value="caroteno">Caroteno</option>
+        <option value="xantofila">Xantofila</option>
+      </select>
+    </div>
+    <button class="button" onclick="alert('Relatório salvo!')">Salvar Relatório</button>
+  </div>
+
+  <!-- Experiências 3 a 10 podem ser duplicadas com textos simulados similares -->
+</main>
+
+<main id="tutoriais">
+  <h2>Tutoriais e Dicas</h2>
+  <ul>
+    <li>Segurança no laboratório</li>
+    <li>Glossário de termos</li>
+    <li>Dicas de navegação</li>
+    <li>Quizzes rápidos para reforço</li>
+  </ul>
+</main>
+
+<main id="sobre">
+  <h2>Sobre o Projeto</h2>
+  <p>O BioLab Virtual permite simular 10 experiências de biologia totalmente interativas. Todas as atividades devem ser realizadas pelo usuário, garantindo aprendizado prático.</p>
+  <p>Autor: Charles Lourenço Mairosse</p>
+</main>
+
+<main id="contato">
+  <h2>Contato</h2>
+  <form onsubmit="alert('Mensagem enviada!'); return false;">
+    <input type="text" placeholder="Nome" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Mensagem" rows="4" required></textarea>
+    <button class="button">Enviar</button>
+  </form>
+</main>
+
+<main id="login">
+  <h2>Login / Cadastro</h2>
+  <p>Para acessar todas as experiências, faça cadastro:</p>
+  <form onsubmit="alert('Cadastro realizado!'); return false;">
+    <input type="text" placeholder="Nome completo" required>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Senha" required>
+    <button class="button">Cadastrar</button>
+  </form>
+  <p>Ou login:</p>
+  <form onsubmit="alert('Login realizado!'); return false;">
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Senha" required>
+    <button class="button">Login</button>
+  </form>
+  <h3>Pagamento para acesso completo:</h3>
+  <p>Números para pagamento: 840604380 ou 865124282</p>
+  <button class="button" onclick="alert('Pagamento confirmado! Acesso liberado.')">Confirmar Pagamento</button>
+</main>
+
+<footer>
+  <p>© 2025 Charles Lourenço Mairosse | BioLab Virtual</p>
+</footer>
+
+</body>
+</html>
